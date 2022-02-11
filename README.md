@@ -1,8 +1,13 @@
 # CustomArrayList
-Java Bootcamp Assignment 5, based on making my own version of Java's ArrayList data structure
+
+### --------------Update 11 Feb 2022:-------------- 
+Added installation notes to CustomTester.java file, in case there was a problem in installing and running this homework assignment.
+### ------------End Update 11 Feb 2022------------
+
+##### Java Bootcamp Assignment 5, based on making my own version of Java's ArrayList data structure
 Below text is the assignment from the Java bootcamp:
 
-Assignment #5
+### Assignment #5
  
 This assignment will focus on algorithms, specifically around coding your own implementation of the ArrayList data structure.
 
@@ -14,7 +19,7 @@ While you’re implementing code inside of the CustomArrayList class, you should
 
 Please make sure you try adding more than 10 elements to your CustomList.
 
---How to grow the backing Object array--
+#### --How to grow the backing Object array--
 
 When adding a new element, if the backing Object array is full, you should have the array double in size.
 
@@ -24,16 +29,23 @@ When adding the 21st element, it should grow from 20 to 40 elements in size, etc
 
 For this assignment, we won’t worry about the ability to remove elements from our array.
 
---Testing your code--
+#### --Testing your code--
 
 The purpose of the assignment is to add code to the CustomArrayList class, but in order to make sure that your code works, you'll need to test it.
 
 I'd recommend testing it by instantiating your class and inserting elements into it.
 
 CustomList<String> myCustomList = new CustomArrayList<>();
-myCustomList.add("element 1"); // and continue to add another 10, 20 or 40 more elements
-
+ 
+myCustomList.add("element 1");
+ 
+// and continue to add another 10, 20 or 40 more elements
+ 
 // then you should validate that all the elements you've inserted actually exist in your data structure
+ 
 for (int i=0; i<myCustomList.getSize(); i++) {
-    System.out.println(myCustomList.get(i));
+                                                                              
+ System.out.println(myCustomList.get(i));
+                                                                              
 }
+                                                                              
