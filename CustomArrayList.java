@@ -9,6 +9,12 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public boolean add ( T item ) {
 	
+		Integer myCurrentSize = getSize();
+		
+		if ( myCurrentSize >= currentMaxSize ) { growArrayList (); }
+		// I have no idea why I need multiple checks to grow the array
+		// it's as if the boolean flag check doesn't fire at all
+		
 		if ( item == null ) return false;
 		
 		Integer whereToAdd = 0;
@@ -43,6 +49,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	public T get ( int index ) {
 
 		if ( index >= currentSize ) {
+			growArrayList ();
 			return null;
 		}
 		else {
